@@ -21,6 +21,7 @@ export default {
   padding-bottom: 15px;
   img {
     border-radius: 50%;
+    box-shadow: 0px 0px 11px 5px rgba(134, 134, 134, 0.6);
   }
   h3 {
     padding-top: 10px;
