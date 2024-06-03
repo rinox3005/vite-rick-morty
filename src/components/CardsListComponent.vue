@@ -16,7 +16,13 @@ export default {
 
 <template>
   <div class="container">
-    <RoundCardComponent v-for="character in store.results" />
+    <RoundCardComponent
+      v-for="character in store.results"
+      :name="character.name"
+      :image="character.image"
+      :status="character.status"
+      :species="character.species"
+    />
   </div>
 </template>
 
