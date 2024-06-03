@@ -1,11 +1,26 @@
 <script>
+import CardsListComponent from "./CardsListComponent.vue";
 export default {
   name: "MainComponent",
+  components: {
+    CardsListComponent,
+  },
 };
 </script>
 
 <template>
-  <h2>Main Component</h2>
+  <main>
+    <div>SearchBar</div>
+    <CardsListComponent />
+  </main>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+main {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+</style>
