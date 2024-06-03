@@ -1,6 +1,15 @@
-<!-- <script></script> -->
+<script>
+import HeaderComponent from "./components/HeaderComponent.vue";
+import MainComponent from "./components/MainComponent.vue";
+export default {
+  components: {
+    HeaderComponent,
+    MainComponent,
+  },
+};
+</script>
 <template>
-  <h1>Vue Vite Template</h1>
-  <p>Template di partenza per progetti Vite Vue</p>
+  <HeaderComponent />
+  <MainComponent />
 </template>
-<!-- <style></style> -->
+<style></style>

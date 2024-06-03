@@ -1,9 +1,12 @@
-import { createApp } from 'vue';
+import { createApp } from "vue";
 
 //import style
-import './assets/scss/main.scss';
+import "./assets/scss/main.scss";
 
 //import vue root component
-import App from './App.vue';
+import App from "./App.vue";
 
-createApp(App).mount('#app');
+//import font
+import "@fontsource/montserrat";
+
+createApp(App).mount("#app");
