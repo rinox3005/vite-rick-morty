@@ -17,10 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 main {
-  width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  text-align: center;
 }
 </style>

@@ -7,7 +7,7 @@ export default {
 <template>
   <div class="card-container">
     <img src="" alt="Immagine" />
-    <h3>Nome</h3>
+    <h3>name</h3>
     <p>Status</p>
     <p>Race</p>
   </div>
@@ -15,7 +15,12 @@ export default {
 
 <style lang="scss" scoped>
 .card-container {
-  width: calc(100% / 4);
+  width: calc(100% / 4 - 20px);
   text-align: center;
+  padding-bottom: 15px;
+}
+
+img {
+  border-radius: 50%;
 }
 </style>

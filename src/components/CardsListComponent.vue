@@ -1,7 +1,13 @@
 <script>
 import RoundCardComponent from "./RoundCardComponent.vue";
+import { store } from "../store";
 export default {
   name: "CardsListComponent",
+  data() {
+    return {
+      store,
+    };
+  },
   components: {
     RoundCardComponent,
   },
@@ -10,13 +16,16 @@ export default {
 
 <template>
   <div class="container">
-    <RoundCardComponent />
+    <RoundCardComponent v-for="character in store.results" />
   </div>
 </template>
 
 <style lang="scss" scoped>
 .container {
-  width: 100%;
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 1400px;
+  margin: 20px auto;
 }
 </style>
