@@ -10,7 +10,7 @@ body {
   background-color: $bg-color;
   background-image: linear-gradient($line-color-1 0px, transparent 0px),
     linear-gradient(90deg, $line-color-1 0px, transparent 0px),
-    linear-gradient($line-color-2 7px, transparent 1px),
-    linear-gradient(90deg, $line-color-2 7px, transparent 1px);
+    linear-gradient($line-color-2 10px, transparent 1px),
+    linear-gradient(90deg, $line-color-2 10px, transparent 1px);
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
 }
