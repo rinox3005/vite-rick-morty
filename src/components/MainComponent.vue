@@ -1,11 +1,19 @@
 <script>
 import CardsListComponent from "./CardsListComponent.vue";
 import SearchBarComponent from "./SearchBarComponent.vue";
+import LoadingComponent from "./LoadingComponent.vue";
+import { store } from "../store";
 export default {
   name: "MainComponent",
+  data() {
+    return {
+      store,
+    };
+  },
   components: {
     CardsListComponent,
     SearchBarComponent,
+    LoadingComponent,
   },
 };
 </script>
@@ -13,8 +21,11 @@ export default {
 <template>
   <main>
     <SearchBarComponent />
-    <CardsListComponent />
-    <div class="resultsNum">Found 20 characters</div>
+    <CardsListComponent v-if="store.results.length === 20" />
+    <LoadingComponent v-else />
+    <div class="resultsNum" v-show="store.results.length === 20">
+      Found 20 characters
+    </div>
   </main>
 </template>
 
