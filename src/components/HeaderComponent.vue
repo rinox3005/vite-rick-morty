@@ -17,7 +17,7 @@ header {
   h1 {
     font-size: 35px;
     font-weight: 900;
-    padding: 25px 0;
+    padding-top: 25px;
   }
 }
 </style>

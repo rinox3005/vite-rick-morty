@@ -2,6 +2,7 @@
 export default {
   name: "SearchBarComponent",
   props: ["store"],
+  emits: ["search"],
   methods: {
     resetSearch() {
       this.store.searchStatus = "";
@@ -56,9 +57,15 @@ export default {
 .search-btn {
   background-color: #0a6efd;
   color: #ffffff;
+  &:hover {
+    background-color: #0452c0;
+  }
 }
 
 .reset-btn {
   background-color: #ffc106;
+  &:hover {
+    background-color: #c79709;
+  }
 }
 </style>
