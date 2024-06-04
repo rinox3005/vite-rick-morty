@@ -2,12 +2,23 @@
 export default {
   name: "SearchBarComponent",
   props: ["store"],
+  methods: {
+    resetSearch() {
+      this.store.searchStatus = "";
+      this.store.searchName = "";
+      this.$emit("search");
+    },
+  },
 };
 </script>
 
 <template>
   <div class="search-bar">
-    <input type="text" placeholder="Search character" />
+    <input
+      type="text"
+      placeholder="Search character"
+      v-model="store.searchName"
+    />
     <select name="status" id="status" v-model="store.searchStatus">
       <option value="" disabled selected hidden>Select status</option>
       <option value="dead">Dead</option>
@@ -15,7 +26,7 @@ export default {
       <option value="unknown">Unknown</option>
     </select>
     <button class="search-btn" @click="$emit('search')">Search</button>
-    <button class="reset-btn">Reset</button>
+    <button class="reset-btn" @click="resetSearch">Reset</button>
   </div>
 </template>
 

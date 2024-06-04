@@ -20,7 +20,8 @@ export default {
 
       const params = {};
 
-      if (this.store.searchStatus) {
+      if (this.store.searchStatus || this.store.searchName) {
+        params.name = this.store.searchName;
         params.status = this.store.searchStatus;
       }
 
