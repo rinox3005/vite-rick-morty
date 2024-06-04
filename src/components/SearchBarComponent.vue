@@ -2,11 +2,6 @@
 export default {
   name: "SearchBarComponent",
   props: ["store"],
-  methods: {
-    search() {
-      console.log("cerca card");
-    },
-  },
 };
 </script>
 
@@ -14,7 +9,7 @@ export default {
   <div class="search-bar">
     <input type="text" placeholder="Search character" />
     <select name="status" id="status" v-model="store.searchStatus">
-      <option value="" disabled selected hidden>Select your option</option>
+      <option value="" disabled selected hidden>Select status</option>
       <option value="dead">Dead</option>
       <option value="alive">Alive</option>
       <option value="unknown">Unknown</option>
