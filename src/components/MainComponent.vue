@@ -48,9 +48,7 @@ export default {
 <template>
   <main>
     <SearchBarComponent :store="this.store" @search="apiCall" />
-    <div class="topPageNav">
-      <PageNavComponent @search="apiCall" />
-    </div>
+    <PageNavComponent @search="apiCall" />
     <LoadingComponent v-if="this.store.loading" />
     <CardsListComponent v-else />
     <div class="resultsNum" v-show="!this.store.loading">
@@ -65,15 +63,10 @@ export default {
 main {
   margin: 30px auto;
   text-align: center;
-  position: relative;
+
   .resultsNum {
     padding-bottom: 30px;
     font-weight: 900;
-  }
-  .topPageNav {
-    position: absolute;
-    top: 0;
-    right: 300px;
   }
 }
 </style>

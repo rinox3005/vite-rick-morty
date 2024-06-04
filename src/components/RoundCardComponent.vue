@@ -16,7 +16,6 @@ export default {
 
 <style lang="scss" scoped>
 .card-container {
-  width: calc(100% / 4 - 20px);
   text-align: center;
   padding-bottom: 15px;
   img {

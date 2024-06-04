@@ -30,8 +30,9 @@ export default {
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  width: 1400px;
+  justify-content: center;
+  gap: 30px;
+  width: 80%;
   margin: 20px auto;
 }
 </style>
