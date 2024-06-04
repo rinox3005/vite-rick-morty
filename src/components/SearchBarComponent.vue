@@ -1,19 +1,25 @@
 <script>
 export default {
   name: "SearchBarComponent",
+  props: ["store"],
+  methods: {
+    search() {
+      console.log("cerca card");
+    },
+  },
 };
 </script>
 
 <template>
   <div class="search-bar">
     <input type="text" placeholder="Search character" />
-    <select name="status" id="status">
-      <option value="default" selected hidden>Select status</option>
+    <select name="status" id="status" v-model="store.searchStatus">
+      <option value="" disabled selected hidden>Select your option</option>
       <option value="dead">Dead</option>
       <option value="alive">Alive</option>
       <option value="unknown">Unknown</option>
     </select>
-    <button class="search-btn">Search</button>
+    <button class="search-btn" @click="$emit('search')">Search</button>
     <button class="reset-btn">Reset</button>
   </div>
 </template>
@@ -22,8 +28,9 @@ export default {
 .search-bar {
   padding-bottom: 20px;
   input {
-    padding: 4px;
+    padding: 5px;
     border-radius: 5px;
+    border: 1px solid rgb(163, 163, 163);
   }
   select {
     padding: 5px;
