@@ -7,4 +7,5 @@ export const store = reactive({
   apiUrl: "https://rickandmortyapi.com/api/character",
   searchStatus: "",
   searchName: "",
+  // foundCards: true,
 });

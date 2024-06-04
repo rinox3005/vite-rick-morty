@@ -30,6 +30,9 @@ export default {
         this.store.results = response.data.results;
         this.store.info = response.data.info;
         setTimeout(this.testSearchComplete, 500);
+        // if (response.status === 404) {
+        //   this.store.foundCards = false;
+        // }
       });
     },
     testSearchComplete() {
