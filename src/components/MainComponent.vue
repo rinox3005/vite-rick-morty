@@ -21,10 +21,11 @@ export default {
 <template>
   <main>
     <SearchBarComponent />
-    <CardsListComponent v-if="store.results.length === 20" />
-    <LoadingComponent v-else />
-    <div class="resultsNum" v-show="store.results.length === 20">
-      Found 20 characters
+    <LoadingComponent v-if="this.store.loading" />
+    <CardsListComponent v-else />
+    <div class="resultsNum" v-show="!this.store.loading">
+      Showing {{ store.results.length }} characters out of
+      {{ store.info.count }} found
     </div>
   </main>
 </template>
